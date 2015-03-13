@@ -27,9 +27,11 @@ L_main2:
 	BRA         L_main2
 	NOP
 	NOP
-;test1.c,9 :: 		}
-	GOTO        L_main0
+;test1.c,9 :: 		PORTD.RB1 = 1;
+	BSF         PORTD+0, 1 
 ;test1.c,10 :: 		}
+	GOTO        L_main0
+;test1.c,11 :: 		}
 L_end_main:
 	GOTO        $+0
 ; end of _main
